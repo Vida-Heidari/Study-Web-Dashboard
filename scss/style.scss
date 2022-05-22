@@ -2,13 +2,13 @@
 @import "./utilities";
 
 #main {
-  // border: 2px solid orange;
+  border: 2px solid orange;
   height: 100vh;
   padding: 0 3rem;
   height: 100vh;
 
   .main__wrapper {
-    // border: 2px solid red;
+    border: 2px solid red;
     display: grid;
     grid-auto-columns: 1fr 1fr;
     grid-auto-rows: 1fr;
@@ -19,16 +19,20 @@
   }
 
   .section-left {
+    border: 2px solid green;
     grid-area: section-left;
   }
 
   .section-center {
+    border: 2px solid blue;
     grid-area: section-center;
   }
 
   .section-right {
+    border: 2px solid blueviolet;
     grid-area: section-right;
   }
 }
 
 @import "./left-section";
+@import "./center-section";

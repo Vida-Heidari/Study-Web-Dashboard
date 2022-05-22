@@ -1,0 +1,92 @@
+#section-center {
+  padding: 5rem 2rem;
+
+  .section-center__wrapper {
+    border: 2px solid lightgreen;
+    display: grid;
+    grid-template-rows: 0.2fr 4fr 5fr;
+    gap: 5rem;
+    grid-template-areas:
+      "center__header"
+      "new-coursecs"
+      "my-coursecs";
+  }
+
+  // --------------------------------- HEADER ---------------------------------
+  .center__header {
+    border: 2px solid lightcoral;
+    grid-area: center__header;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .header__left {
+      h1 {
+        font-size: clamp(1rem, 5vw, 3rem);
+        font-weight: 600;
+      }
+    }
+
+    .header__right {
+      display: grid;
+      grid-template-columns: 3fr 0.5fr;
+      gap: 1rem;
+      grid-template-areas: "search-box notification";
+    }
+
+    .search-box {
+      grid-area: search-box;
+      height: 70%;
+      background: $white-color;
+      color: $light-gray-color;
+      border-radius: $border-radius-md;
+      border: 1px solid $secondary-color-1;
+      padding: 1rem;
+
+      &:focus-within {
+        border: 0.1rem solid $primary-color-1;
+      }
+
+      input {
+        padding: 0.5rem 1rem;
+        background: transparent;
+        border: none;
+        outline-color: $white-color;
+      }
+    }
+
+    .notification {
+      grid-area: notification;
+
+      font-size: 2.5rem;
+      background: $white-color;
+      height: 70%;
+      text-align: center;
+      padding: 0.5rem 1.5rem;
+      border-radius: $border-radius-md;
+      border: 1px solid $secondary-color-1;
+      cursor: pointer;
+      transition: color 300ms;
+
+      &:hover {
+        color: $primary-color-1;
+      }
+    }
+  }
+
+  // ------------------------------ NEW COURSES ------------------------------
+  .new-coursecs {
+    border: 2px solid lightblue;
+    grid-area: new-coursecs;
+  }
+
+  // ------------------------------ MY COURSES ------------------------------
+  .my-coursecs {
+    border: 2px solid lightgreen;
+    grid-area: my-coursecs;
+  }
+
+  img {
+    width: 10rem;
+  }
+}
