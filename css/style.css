@@ -226,7 +226,7 @@ img {
 }
 
 #section-center {
-  padding: 5rem 2rem;
+  padding: 5rem 0;
 }
 
 #section-center .section-center__wrapper {
@@ -237,6 +237,7 @@ img {
       grid-template-rows: 0.2fr 4fr 5fr;
   gap: 5rem;
       grid-template-areas: "center__header" "new-coursecs" "my-coursecs";
+  padding: 0 2rem;
 }
 
 #section-center .center__header {
@@ -274,7 +275,6 @@ img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: search-box;
-  height: 70%;
   background: #fff;
   color: #a4a4a4;
   border-radius: 1rem;
@@ -299,18 +299,18 @@ img {
   grid-area: notification;
   font-size: 2.5rem;
   background: #fff;
-  height: 70%;
   text-align: center;
   padding: 0.5rem 1.5rem;
   border-radius: 1rem;
   border: 1px solid #e9e3fe;
   cursor: pointer;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
+  -webkit-transition: 300ms;
+  transition: 300ms;
 }
 
 #section-center .center__header .notification:hover {
   color: #8a70d6;
+  border-color: #8a70d6;
 }
 
 #section-center .new-coursecs {
@@ -318,6 +318,217 @@ img {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: new-coursecs;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 5rem;
+}
+
+#section-center .new-coursecs h2 {
+  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-weight: 600;
+}
+
+#section-center .new-coursecs .posts {
+  display: -ms-grid;
+  display: grid;
+  grid-auto-columns: 1fr;
+  -ms-grid-columns: (minmax(0, 1fr))[3];
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+  -ms-grid-rows: 1fr;
+      grid-template-rows: 1fr;
+  gap: 3rem;
+      grid-template-areas: "post1 post2 post3";
+  gap: 3rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: auto;
+}
+
+#section-center .new-coursecs .post1 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: post1;
+}
+
+#section-center .new-coursecs .post2 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: post2;
+}
+
+#section-center .new-coursecs .post3 {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: post3;
+}
+
+#section-center .new-coursecs .post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: lightblue;
+  border-radius: 1rem;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+  padding: 2rem;
+  width: Min(100%, 50rem);
+}
+
+#section-center .new-coursecs .post:hover {
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+          box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+}
+
+#section-center .new-coursecs .post:hover .post__image img {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
+}
+
+#section-center .new-coursecs .post .post__image {
+  width: 100%;
+  background-color: lightcoral;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-radius: 1rem;
+  padding: 2rem 0;
+}
+
+#section-center .new-coursecs .post .post__image img {
+  width: Min(15rem, 100%);
+  height: auto;
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+#section-center .new-coursecs .post:nth-of-type(1) {
+  background: #fff0e1;
+}
+
+#section-center .new-coursecs .post1 .post__image {
+  background: #fcab5e;
+}
+
+#section-center .new-coursecs .post1 .students__right {
+  background: #fcab5e;
+}
+
+#section-center .new-coursecs .post1 .students__right:hover {
+  background: #fcb877;
+}
+
+#section-center .new-coursecs .post:nth-of-type(2) {
+  background: #e9e3fe;
+}
+
+#section-center .new-coursecs .post2 .post__image {
+  background: #8a70d6;
+}
+
+#section-center .new-coursecs .post2 .students__right {
+  background: #8a70d6;
+}
+
+#section-center .new-coursecs .post2 .students__right:hover {
+  background: #9a84dc;
+}
+
+#section-center .new-coursecs .post:nth-of-type(3) {
+  background: #e5f3fe;
+}
+
+#section-center .new-coursecs .post3 .post__image {
+  background: #579be4;
+}
+
+#section-center .new-coursecs .post3 .students__right {
+  background: #579be4;
+}
+
+#section-center .new-coursecs .post3 .students__right:hover {
+  background: #6da8e8;
+}
+
+#section-center .new-coursecs .post__info {
+  width: 100%;
+  margin: 2rem 0;
+}
+
+#section-center .new-coursecs .post__info span {
+  font-weight: 500;
+}
+
+#section-center .new-coursecs .post__info p {
+  color: #a4a4a4;
+  font-size: 1.2rem;
+}
+
+#section-center .new-coursecs .post__students {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-center .new-coursecs .post__students .students__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#section-center .new-coursecs .post__students .students__left .student img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+#section-center .new-coursecs .post__students .students__left .student2 {
+  -webkit-transform: translateX(-0.5rem);
+          transform: translateX(-0.5rem);
+}
+
+#section-center .new-coursecs .post__students .students__left .student3 {
+  -webkit-transform: translateX(-1rem);
+          transform: translateX(-1rem);
+}
+
+#section-center .new-coursecs .post__students .students__right {
+  color: #fff;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  -webkit-transition: 300ms;
+  transition: 300ms;
+  cursor: pointer;
 }
 
 #section-center .my-coursecs {

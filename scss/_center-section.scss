@@ -1,5 +1,5 @@
 #section-center {
-  padding: 5rem 2rem;
+  padding: 5rem 0;
 
   .section-center__wrapper {
     border: 2px solid lightgreen;
@@ -10,6 +10,7 @@
       "center__header"
       "new-coursecs"
       "my-coursecs";
+    padding: 0 2rem;
   }
 
   // --------------------------------- HEADER ---------------------------------
@@ -36,7 +37,6 @@
 
     .search-box {
       grid-area: search-box;
-      height: 70%;
       background: $white-color;
       color: $light-gray-color;
       border-radius: $border-radius-md;
@@ -60,16 +60,16 @@
 
       font-size: 2.5rem;
       background: $white-color;
-      height: 70%;
       text-align: center;
       padding: 0.5rem 1.5rem;
       border-radius: $border-radius-md;
       border: 1px solid $secondary-color-1;
       cursor: pointer;
-      transition: color 300ms;
+      transition: 300ms;
 
       &:hover {
         color: $primary-color-1;
+        border-color: $primary-color-1;
       }
     }
   }
@@ -78,6 +78,177 @@
   .new-coursecs {
     border: 2px solid lightblue;
     grid-area: new-coursecs;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+
+    h2 {
+      font-size: clamp(0.5rem, 5vw, 2rem);
+      font-weight: 600;
+    }
+
+    .posts {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-rows: 1fr;
+      gap: 3rem;
+      grid-template-areas: "post1 post2 post3";
+      gap: 3rem;
+      width: fit-content;
+      margin: auto;
+    }
+
+    .post1 {
+      grid-area: post1;
+    }
+    .post2 {
+      grid-area: post2;
+    }
+    .post3 {
+      grid-area: post3;
+    }
+
+    .post {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: lightblue;
+      border-radius: $border-radius-md;
+      transition: 300ms ease-in-out;
+      padding: 2rem;
+      width: Min(100%, 50rem);
+
+      &:hover {
+        // transform: translateY(-1rem);
+        box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+        .post__image {
+          img {
+            transform: scale(1.02);
+          }
+        }
+      }
+
+      .post__image {
+        width: 100%;
+        background-color: lightcoral;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        border-radius: $border-radius-md;
+        padding: 2rem 0;
+        img {
+          width: Min(15rem, 100%);
+          height: auto;
+
+          transition: 300ms ease-in-out;
+        }
+      }
+    }
+
+    //------------------ post1
+    .post:nth-of-type(1) {
+      background: $secondary-color-2;
+    }
+    .post1 {
+      .post__image {
+        background: $primary-color-2;
+      }
+
+      .students__right {
+        background: $primary-color-2;
+
+        &:hover {
+          background: lighten($primary-color-2, 5%);
+        }
+      }
+    }
+    //------------------ post2
+    .post:nth-of-type(2) {
+      background: $secondary-color-1;
+    }
+    .post2 {
+      .post__image {
+        background: $primary-color-1;
+      }
+
+      .students__right {
+        background: $primary-color-1;
+
+        &:hover {
+          background: lighten($primary-color-1, 5%);
+        }
+      }
+    }
+
+    //------------------ post3
+    .post:nth-of-type(3) {
+      background: $secondary-color-3;
+    }
+    .post3 {
+      .post__image {
+        background: $primary-color-3;
+      }
+
+      .students__right {
+        background: $primary-color-3;
+
+        &:hover {
+          background: lighten($primary-color-3, 5%);
+        }
+      }
+    }
+    //------------------ POST INFO
+    .post__info {
+      width: 100%;
+      margin: 2rem 0;
+
+      span {
+        font-weight: 500;
+      }
+
+      p {
+        color: $light-gray-color;
+        font-size: 1.2rem;
+      }
+    }
+
+    //------------------ POST STUDENTS
+    .post__students {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      .students__left {
+        display: flex;
+        .student {
+          img {
+            width: 3rem;
+            height: 3rem;
+            border-radius: 50%;
+          }
+        }
+
+        .student2 {
+          transform: translateX(-0.5rem);
+        }
+
+        .student3 {
+          transform: translateX(-1rem);
+        }
+      }
+
+      .students__right {
+        color: $white-color;
+        border-radius: $border-radius-sm;
+        padding: 0.6rem 1.5rem;
+        transition: 300ms;
+        cursor: pointer;
+      }
+    }
   }
 
   // ------------------------------ MY COURSES ------------------------------
