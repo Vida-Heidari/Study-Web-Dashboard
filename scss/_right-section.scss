@@ -10,7 +10,6 @@
   }
 
   .right__header {
-    border: 1px solid lightcoral;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -39,7 +38,6 @@
   }
 
   .right__user {
-    border: 1px solid lightblue;
     text-align: center;
     img {
       width: 10rem;
@@ -77,8 +75,6 @@
 }
 
 .right__calendar {
-  border: 1px solid lightcoral;
-
   .calendar__title {
     display: flex;
     flex-direction: row;
@@ -157,5 +153,79 @@
 }
 
 .right__progress {
-  border: 1px solid lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .progress__title {
+    h2 {
+      font-size: clamp(0.5rem, 5vw, 2rem);
+      font-weight: 600;
+    }
+  }
+
+  .progress__info {
+    .info-box {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: $border-radius-md;
+      box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+      padding: 1rem 2rem;
+      margin: 2rem 0;
+      transition: 500ms;
+
+      &:hover {
+        transform: translateX(0.8rem);
+        color: $primary-color-1;
+        cursor: pointer;
+      }
+
+      .info-box__left {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        .progress-bar__container {
+          width: 5rem;
+          height: 5rem;
+          border-radius: 50%;
+          padding: 1rem;
+          margin-right: 2rem;
+        }
+
+        .progress1 {
+          background: radial-gradient(white 59%, transparent 60%),
+            conic-gradient(transparent 0deg 179deg, gainsboro 180deg 250deg),
+            conic-gradient($primary-color-1 0deg, $primary-color-1);
+        }
+
+        .progress2 {
+          background: radial-gradient(white 59%, transparent 60%),
+            conic-gradient(transparent 0deg 233deg, gainsboro 234deg 250deg),
+            conic-gradient($primary-color-1 0deg, $primary-color-1);
+        }
+
+        .progress3 {
+          background: radial-gradient(white 59%, transparent 60%),
+            conic-gradient(transparent 0deg 89deg, gainsboro 90deg 250deg),
+            conic-gradient($primary-color-1 0deg, $primary-color-1);
+        }
+
+        .progress-name {
+          span {
+            font-weight: 500;
+          }
+          p {
+            margin: 0;
+            color: $light-gray-color;
+            font-size: 1.3rem;
+            font-weight: 300;
+          }
+        }
+      }
+    }
+  }
 }

@@ -68,13 +68,11 @@ img {
 }
 
 #main {
-  border: 2px solid orange;
   padding: 0 3rem;
   height: 100vh;
 }
 
 #main .main__wrapper {
-  border: 2px solid red;
   display: -ms-grid;
   display: grid;
   grid-auto-columns: 1fr 1fr;
@@ -88,21 +86,18 @@ img {
 }
 
 #main .section-left {
-  border: 2px solid green;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: section-left;
 }
 
 #main .section-center {
-  border: 2px solid blue;
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: section-center;
 }
 
 #main .section-right {
-  border: 2px solid blueviolet;
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: section-right;
@@ -202,7 +197,7 @@ img {
 }
 
 #section-left .section-left__wrapper .section-left__subscribe .subscribe__image img {
-  width: 20rem;
+  width: 15rem;
   -webkit-transform: translateY(-4rem);
           transform: translateY(-4rem);
   border-radius: 1rem;
@@ -696,7 +691,6 @@ img {
 }
 
 #section-right .right__header {
-  border: 1px solid lightcoral;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -735,7 +729,6 @@ img {
 }
 
 #section-right .right__user {
-  border: 1px solid lightblue;
   text-align: center;
 }
 
@@ -765,10 +758,6 @@ img {
   color: #a4a4a4;
   font-size: 1.3rem;
   font-weight: 400;
-}
-
-.right__calendar {
-  border: 1px solid lightcoral;
 }
 
 .right__calendar .calendar__title {
@@ -856,5 +845,94 @@ img {
 }
 
 .right__progress {
-  border: 1px solid lightblue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.right__progress .progress__title h2 {
+  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-weight: 600;
+}
+
+.right__progress .progress__info .info-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1rem;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+          box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  -webkit-transition: 500ms;
+  transition: 500ms;
+}
+
+.right__progress .progress__info .info-box:hover {
+  -webkit-transform: translateX(0.8rem);
+          transform: translateX(0.8rem);
+  color: #8a70d6;
+  cursor: pointer;
+}
+
+.right__progress .progress__info .info-box .info-box__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress-bar__container {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-right: 2rem;
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress1 {
+  background: radial-gradient(white 59%, transparent 60%), conic-gradient(transparent 0deg 179deg, gainsboro 180deg 250deg), conic-gradient(#8a70d6 0deg, #8a70d6);
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress2 {
+  background: radial-gradient(white 59%, transparent 60%), conic-gradient(transparent 0deg 233deg, gainsboro 234deg 250deg), conic-gradient(#8a70d6 0deg, #8a70d6);
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress3 {
+  background: radial-gradient(white 59%, transparent 60%), conic-gradient(transparent 0deg 89deg, gainsboro 90deg 250deg), conic-gradient(#8a70d6 0deg, #8a70d6);
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress-name span {
+  font-weight: 500;
+}
+
+.right__progress .progress__info .info-box .info-box__left .progress-name p {
+  margin: 0;
+  color: #a4a4a4;
+  font-size: 1.3rem;
+  font-weight: 300;
 }
