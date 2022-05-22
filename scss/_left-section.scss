@@ -4,7 +4,9 @@
   .section-left__wrapper {
     display: flex;
     flex-direction: column;
+    // justify-content: space-between;
     gap: 4rem;
+    height: 100%;
 
     .logo {
       font-size: 1.8rem;
@@ -43,7 +45,7 @@
     }
 
     .section-left__menu {
-      // margin-bottom: auto;
+      margin-bottom: auto;
       line-height: 3.5;
       color: $light-gray-color;
 
