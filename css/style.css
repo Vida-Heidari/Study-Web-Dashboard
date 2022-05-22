@@ -337,9 +337,8 @@ img {
       grid-template-columns: repeat(3, minmax(0, 1fr));
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  gap: 3rem;
       grid-template-areas: "post1 post2 post3";
-  gap: 3rem;
+  gap: 1.5rem;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
@@ -406,11 +405,11 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   border-radius: 1rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
 }
 
 #section-center .new-coursecs .post .post__image img {
-  width: Min(15rem, 100%);
+  width: Min(10rem, 100%);
   height: auto;
   -webkit-transition: 300ms ease-in-out;
   transition: 300ms ease-in-out;

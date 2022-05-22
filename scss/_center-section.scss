@@ -89,9 +89,8 @@
       grid-auto-columns: 1fr;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-template-rows: 1fr;
-      gap: 3rem;
       grid-template-areas: "post1 post2 post3";
-      gap: 3rem;
+      gap: 1.5rem;
       width: fit-content;
       margin: auto;
     }
@@ -132,9 +131,9 @@
         display: flex;
         justify-content: center;
         border-radius: $border-radius-md;
-        padding: 2rem 0;
+        padding: 3rem 0;
         img {
-          width: Min(15rem, 100%);
+          width: Min(10rem, 100%);
           height: auto;
 
           transition: 300ms ease-in-out;
