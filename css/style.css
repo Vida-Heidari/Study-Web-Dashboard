@@ -121,6 +121,7 @@ img {
       -ms-flex-direction: column;
           flex-direction: column;
   gap: 4rem;
+  height: 100%;
 }
 
 #section-left .section-left__wrapper .logo {
@@ -168,6 +169,7 @@ img {
 }
 
 #section-left .section-left__wrapper .section-left__menu {
+  margin-bottom: auto;
   line-height: 3.5;
   color: #a4a4a4;
 }
@@ -672,4 +674,103 @@ img {
 
 #section-center img {
   width: 10rem;
+}
+
+#section-right {
+  padding: 5rem 2rem;
+}
+
+#section-right .section-right__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 4rem;
+  height: 100%;
+}
+
+#section-right .right__header {
+  border: 1px solid lightcoral;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-right .right__header h2 {
+  font-size: clamp(0.5rem, 5vw, 2rem);
+  font-weight: 600;
+}
+
+#section-right .right__header .header__edit {
+  font-size: 2.5rem;
+  background: #fff;
+  text-align: center;
+  border-radius: 1rem;
+  border: 1px solid #e9e3fe;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  -webkit-transition: all 300ms ease 0s;
+  transition: all 300ms ease 0s;
+}
+
+#section-right .right__header .header__edit:hover {
+  color: #8a70d6;
+  border-color: #8a70d6;
+}
+
+#section-right .right__user {
+  border: 1px solid lightblue;
+  text-align: center;
+}
+
+#section-right .right__user img {
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+}
+
+#section-right .right__user .user__info .user__name span {
+  font-size: clamp(0.5rem, 5vw, 1.5rem);
+  font-weight: 600;
+  cursor: pointer;
+  -webkit-transition: color 300ms;
+  transition: color 300ms;
+}
+
+#section-right .right__user .user__info .user__name span:hover {
+  color: #8a70d6;
+}
+
+#section-right .right__user .user__info .user__name i {
+  color: #8a70d6;
+}
+
+#section-right .right__user .user__info .user__level span {
+  color: #a4a4a4;
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.right__calendar {
+  border: 1px solid lightcoral;
+}
+
+.right__progress {
+  border: 1px solid lightblue;
 }
