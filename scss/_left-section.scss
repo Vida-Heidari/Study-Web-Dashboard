@@ -1,0 +1,98 @@
+#section-left {
+  padding: 5rem 2rem;
+
+  .section-left__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+
+    .logo {
+      font-size: 1.8rem;
+      display: grid;
+      grid-template-columns: 0.2fr 0.4fr;
+      gap: 1rem;
+      grid-template-areas: "logo__shapes logo__title";
+    }
+
+    .logo__shapes {
+      grid-area: logo__shapes;
+      justify-self: flex-end;
+
+      i {
+        transform: rotate(45deg);
+      }
+
+      .first-shape {
+        color: $secondary-color-1;
+      }
+
+      .second-shape {
+        top: 0.5rem;
+        left: 1rem;
+        transform: translate(-0.7rem) rotate(45deg);
+        color: $primary-color-1;
+      }
+    }
+
+    .logo__title {
+      grid-area: logo__title;
+
+      h4 {
+        font-weight: 400;
+      }
+    }
+
+    .section-left__menu {
+      // margin-bottom: auto;
+      line-height: 3.5;
+      color: $light-gray-color;
+
+      ul {
+        a {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 0 1.5rem;
+          transition: 350ms ease-in-out;
+
+          &:hover {
+            color: $dark-gray-color;
+            background: $secondary-color-1;
+            border-radius: $border-radius-md;
+          }
+        }
+      }
+    }
+
+    .section-left__subscribe {
+      background: $secondary-color-1;
+      border-radius: $border-radius-md;
+      text-align: center;
+      margin-top: 6rem;
+      padding: 0 1.5rem;
+      .subscribe__image {
+        img {
+          width: 15rem;
+          transform: translateY(-3rem);
+          border-radius: $border-radius-md;
+        }
+      }
+
+      button {
+        background: $primary-color-1;
+        color: snow;
+        border: none;
+        border-radius: $border-radius-sm;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+        transition: 300ms;
+
+        &:hover {
+          background: transparent;
+          color: $dark-gray-color;
+          box-shadow: inset 0 0 0 0.2rem $primary-color-1;
+        }
+      }
+    }
+  }
+}
