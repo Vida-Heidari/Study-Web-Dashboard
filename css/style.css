@@ -176,6 +176,7 @@ img {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  border-radius: 1rem;
   padding: 0 1.5rem;
   -webkit-transition: 350ms ease-in-out;
   transition: 350ms ease-in-out;
@@ -184,7 +185,6 @@ img {
 #section-left .section-left__wrapper .section-left__menu ul a:hover {
   color: #423f40;
   background: #e9e3fe;
-  border-radius: 1rem;
 }
 
 #section-left .section-left__wrapper .section-left__subscribe {
@@ -196,9 +196,9 @@ img {
 }
 
 #section-left .section-left__wrapper .section-left__subscribe .subscribe__image img {
-  width: 15rem;
-  -webkit-transform: translateY(-3rem);
-          transform: translateY(-3rem);
+  width: 20rem;
+  -webkit-transform: translateY(-4rem);
+          transform: translateY(-4rem);
   border-radius: 1rem;
 }
 
