@@ -2,7 +2,6 @@
   padding: 5rem 0;
 
   .section-center__wrapper {
-    border: 2px solid lightgreen;
     display: grid;
     grid-template-rows: 0.2fr 4fr 5fr;
     gap: 5rem;
@@ -15,7 +14,6 @@
 
   // --------------------------------- HEADER ---------------------------------
   .center__header {
-    border: 2px solid lightcoral;
     grid-area: center__header;
     display: flex;
     flex-direction: row;
@@ -76,7 +74,6 @@
 
   // ------------------------------ NEW COURSES ------------------------------
   .new-coursecs {
-    border: 2px solid lightblue;
     grid-area: new-coursecs;
     display: flex;
     flex-direction: column;
@@ -131,7 +128,6 @@
 
       .post__image {
         width: 100%;
-        background-color: lightcoral;
         overflow: hidden;
         display: flex;
         justify-content: center;
@@ -252,12 +248,10 @@
 
   // ------------------------------ MY COURSES ------------------------------
   .my-coursecs {
-    border: 2px solid lightgreen;
     grid-area: my-coursecs;
     width: 100%;
 
     .courses__title {
-      border: 2px solid red;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -292,6 +286,97 @@
 
         &:hover {
           color: $primary-color-1;
+        }
+      }
+    }
+
+    .courses {
+      .courses__table {
+        width: 100%;
+
+        .table__header {
+          th {
+            color: $light-gray-color;
+            font-weight: 300;
+            padding: 2rem 0;
+          }
+        }
+
+        .table__body {
+          tr {
+            transition: 300ms ease-in-out;
+
+            &:hover {
+              box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
+              cursor: pointer;
+            }
+
+            td {
+              font-weight: 500;
+              padding: 0.5rem 0;
+            }
+            td:first-of-type {
+              display: flex;
+              flex-direction: row;
+              align-items: center;
+
+              i {
+                font-size: 2rem;
+                width: 7rem;
+                text-align: center;
+                border-radius: $border-radius-sm;
+                padding: 2rem;
+                margin: 0.5rem 1rem;
+                margin-left: 0;
+              }
+
+              p {
+                margin: 0;
+                color: $light-gray-color;
+                font-size: 1.2rem;
+                font-weight: 300;
+              }
+            }
+
+            &:nth-of-type(1) {
+              i {
+                background: $secondary-color-1;
+                color: $primary-color-1;
+              }
+            }
+
+            &:nth-of-type(2) {
+              i {
+                background: $secondary-color-3;
+                color: $primary-color-3;
+              }
+            }
+
+            &:nth-of-type(3) {
+              i {
+                background: $secondary-color-4;
+                color: $primary-color-4;
+              }
+            }
+
+            &:nth-of-type(4) {
+              i {
+                background: $secondary-color-1;
+                color: $primary-color-1;
+              }
+            }
+
+            &:nth-of-type(5) {
+              i {
+                background: $secondary-color-2;
+                color: $primary-color-2;
+              }
+            }
+          }
+        }
+
+        .table__row {
+          text-align: left;
         }
       }
     }

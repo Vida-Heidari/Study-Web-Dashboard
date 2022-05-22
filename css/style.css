@@ -229,7 +229,6 @@ img {
 }
 
 #section-center .section-center__wrapper {
-  border: 2px solid lightgreen;
   display: -ms-grid;
   display: grid;
   -ms-grid-rows: 0.2fr 4fr 5fr;
@@ -240,7 +239,6 @@ img {
 }
 
 #section-center .center__header {
-  border: 2px solid lightcoral;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: center__header;
@@ -313,7 +311,6 @@ img {
 }
 
 #section-center .new-coursecs {
-  border: 2px solid lightblue;
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: new-coursecs;
@@ -401,7 +398,6 @@ img {
 
 #section-center .new-coursecs .post .post__image {
   width: 100%;
-  background-color: lightcoral;
   overflow: hidden;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,7 +527,6 @@ img {
 }
 
 #section-center .my-coursecs {
-  border: 2px solid lightgreen;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: my-coursecs;
@@ -539,7 +534,6 @@ img {
 }
 
 #section-center .my-coursecs .courses__title {
-  border: 2px solid red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -590,6 +584,91 @@ img {
 
 #section-center .my-coursecs .courses__title span:hover {
   color: #8a70d6;
+}
+
+#section-center .my-coursecs .courses .courses__table {
+  width: 100%;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__header th {
+  color: #a4a4a4;
+  font-weight: 300;
+  padding: 2rem 0;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr {
+  -webkit-transition: 300ms ease-in-out;
+  transition: 300ms ease-in-out;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:hover {
+  -webkit-box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
+          box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
+  cursor: pointer;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr td {
+  font-weight: 500;
+  padding: 0.5rem 0;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr td:first-of-type {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr td:first-of-type i {
+  font-size: 2rem;
+  width: 7rem;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 2rem;
+  margin: 0.5rem 1rem;
+  margin-left: 0;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr td:first-of-type p {
+  margin: 0;
+  color: #a4a4a4;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:nth-of-type(1) i {
+  background: #e9e3fe;
+  color: #8a70d6;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:nth-of-type(2) i {
+  background: #e5f3fe;
+  color: #579be4;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:nth-of-type(3) i {
+  background: #fee3fd;
+  color: #e293d9;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:nth-of-type(4) i {
+  background: #e9e3fe;
+  color: #8a70d6;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__body tr:nth-of-type(5) i {
+  background: #fff0e1;
+  color: #fcab5e;
+}
+
+#section-center .my-coursecs .courses .courses__table .table__row {
+  text-align: left;
 }
 
 #section-center img {
