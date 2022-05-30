@@ -17,6 +17,7 @@ body {
   color: #423f40;
   line-height: 1.6;
   background: #fcfbfc;
+  position: relative;
 }
 
 button {
@@ -935,4 +936,61 @@ img {
   color: #a4a4a4;
   font-size: 1.3rem;
   font-weight: 300;
+}
+
+.modal_wrapper {
+  /* -------------------------- */
+  /* CLASSES TO MAKE MODAL WORK */
+}
+
+.modal_wrapper h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.modal_wrapper p {
+  font-size: 1.8rem;
+}
+
+.modal_wrapper .close-modal {
+  position: absolute;
+  top: 1.9rem;
+  right: 3.2rem;
+  font-size: 5rem;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modal_wrapper .hidden {
+  display: none;
+}
+
+.modal_wrapper .modal {
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 70%;
+  background-color: white;
+  padding: 6rem;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
+  z-index: 10;
+}
+
+.modal_wrapper .overlay {
+  position: absolute;
+  top: 0rem;
+  left: 0;
+  width: 100vw;
+  height: 100vmax;
+  background-color: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  z-index: 5;
 }
