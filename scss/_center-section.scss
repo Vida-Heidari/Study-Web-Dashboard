@@ -384,6 +384,22 @@
           text-align: left;
         }
       }
+
+      &::-webkit-scrollbar {
+        width: 3px;
+      }
+
+      &::-webkit-scrollbar-track {
+        background-color: $ligh-color;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background: $primary-color-1;
+      }
+
+      & .content .price {
+        text-align: right;
+      }
     }
   }
 
