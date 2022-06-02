@@ -1,12 +1,14 @@
+// @import "./calendar";
+
 #section-right {
-  padding: 5rem 2rem;
+  padding: 2rem;
+  padding-bottom: 0;
 
   .section-right__wrapper {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 4rem;
-    height: 100%;
+    gap: 3.5rem;
   }
 
   .right__header {
@@ -259,8 +261,8 @@
   }
 
   .modal {
-    position: absolute;
-    top: 70%;
+    position: fixed;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 70%;
