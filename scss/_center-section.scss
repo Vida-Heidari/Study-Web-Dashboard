@@ -35,6 +35,10 @@
 
     .search-box {
       grid-area: search-box;
+
+      display: flex;
+      align-items: center;
+
       background: $white-color;
       color: $light-gray-color;
       border-radius: $border-radius-md;
