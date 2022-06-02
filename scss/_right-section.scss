@@ -275,11 +275,11 @@
   }
 
   .overlay {
-    position: absolute;
+    position: fixed;
     top: 0rem;
     left: 0;
-    width: 100vw;
-    height: 100vmax;
+    width: 100%;
+    height: 100%;
     background-color: rgba(0, 0, 0, 0.6);
     backdrop-filter: blur(3px);
     z-index: 5;
