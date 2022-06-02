@@ -313,12 +313,13 @@
 
             &:hover {
               box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
+              border-radius: $border-radius-md;
               cursor: pointer;
             }
 
             td {
               font-weight: 500;
-              padding: 0.5rem 0;
+              padding: 0.5rem;
             }
             td:first-of-type {
               display: flex;
