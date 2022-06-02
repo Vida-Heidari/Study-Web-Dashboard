@@ -1,15 +1,13 @@
 #section-left {
-  padding: 5rem 2rem;
+  padding: 2rem;
+  padding-bottom: 0;
 
   .section-left__wrapper {
     display: flex;
     flex-direction: column;
-    // justify-content: space-between;
-    gap: 4rem;
-    height: 100%;
+    height: 100vh;
 
     .logo {
-      // border: 1px solid red;
       font-size: 1.8rem;
       display: grid;
       grid-template-columns: 0.5fr 1fr;
@@ -47,6 +45,7 @@
     }
 
     .section-left__menu {
+      margin-top: 2rem;
       margin-bottom: auto;
       line-height: 3.5;
       color: $light-gray-color;
@@ -79,8 +78,7 @@
       background: $secondary-color-1;
       border-radius: $border-radius-md;
       text-align: center;
-      margin-top: 6rem;
-      padding: 0 1.5rem;
+      margin-bottom: auto;
       .subscribe__image {
         img {
           width: 15rem;
