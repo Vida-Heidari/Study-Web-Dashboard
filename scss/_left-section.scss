@@ -58,12 +58,19 @@
           gap: 1rem;
           border-radius: $border-radius-md;
           padding: 0 1.5rem;
+          margin: 0.5rem 0;
           transition: 350ms ease-in-out;
 
           &:hover {
             color: $dark-gray-color;
             background: $secondary-color-1;
           }
+        }
+
+        .active {
+          color: $dark-gray-color;
+          background: $secondary-color-1;
+          border-radius: $border-radius-md;
         }
       }
     }
