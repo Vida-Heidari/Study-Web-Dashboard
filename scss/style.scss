@@ -13,18 +13,22 @@
     grid-template-rows: 1fr;
     gap: 2rem 2rem;
     grid-template-areas: "section-left section-center section-right";
+    // height: 100vh;
   }
 
   .section-left {
     grid-area: section-left;
+    height: 100vh;
   }
 
   .section-center {
     grid-area: section-center;
+    height: 100vh;
   }
 
   .section-right {
     grid-area: section-right;
+    height: 100vh;
   }
 }
 
