@@ -12,6 +12,7 @@
       display: grid;
       grid-template-columns: 0.5fr 1fr;
       grid-template-areas: "logo__shapes logo__title";
+      min-width: 19rem;
     }
 
     .logo__shapes {
@@ -51,7 +52,7 @@
       color: $light-gray-color;
 
       ul {
-        a {
+        .menu__link {
           display: flex;
           align-items: center;
           gap: 1rem;
