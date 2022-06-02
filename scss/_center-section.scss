@@ -1,10 +1,10 @@
 #section-center {
-  padding: 5rem 0;
+  padding: 2rem 0;
 
   .section-center__wrapper {
     display: grid;
-    grid-template-rows: 0.2fr 4fr 5fr;
-    gap: 5rem;
+    grid-template-rows: 0.2fr 4fr 4fr;
+    gap: 2rem;
     grid-template-areas:
       "center__header"
       "new-coursecs"
@@ -38,7 +38,6 @@
 
       display: flex;
       align-items: center;
-
       background: $white-color;
       color: $light-gray-color;
       border-radius: $border-radius-md;
@@ -294,6 +293,9 @@
     }
 
     .courses {
+      max-height: 30rem;
+      overflow-y: auto;
+
       .courses__table {
         width: 100%;
 
