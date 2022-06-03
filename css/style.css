@@ -71,6 +71,8 @@ img {
 #main {
   padding: 0 3rem;
   height: 100vh;
+  min-width: 1300px;
+  overflow-y: hidden;
 }
 
 #main .main__wrapper {
@@ -82,7 +84,7 @@ img {
       grid-template-columns: 1fr 3fr 1.5fr;
   -ms-grid-rows: 1fr;
       grid-template-rows: 1fr;
-  gap: 2rem 2rem;
+  gap: 1rem;
       grid-template-areas: "section-left section-center section-right";
 }
 
@@ -90,22 +92,26 @@ img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: section-left;
+  height: 100vh;
 }
 
 #main .section-center {
   -ms-grid-row: 1;
   -ms-grid-column: 2;
   grid-area: section-center;
+  height: 100vh;
 }
 
 #main .section-right {
   -ms-grid-row: 1;
   -ms-grid-column: 3;
   grid-area: section-right;
+  height: 100vh;
 }
 
 #section-left {
-  padding: 5rem 2rem;
+  padding: 2rem;
+  padding-bottom: 0;
 }
 
 #section-left .section-left__wrapper {
@@ -116,18 +122,17 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 4rem;
-  height: 100%;
+  height: 100vh;
 }
 
 #section-left .section-left__wrapper .logo {
   font-size: 1.8rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 0.2fr 0.4fr;
-      grid-template-columns: 0.2fr 0.4fr;
-  gap: 1rem;
+  -ms-grid-columns: 0.5fr 1fr;
+      grid-template-columns: 0.5fr 1fr;
       grid-template-areas: "logo__shapes logo__title";
+  min-width: 19rem;
 }
 
 #section-left .section-left__wrapper .logo__shapes {
@@ -140,18 +145,20 @@ img {
 #section-left .section-left__wrapper .logo__shapes i {
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+  font-size: 2.7rem;
 }
 
 #section-left .section-left__wrapper .logo__shapes .first-shape {
-  color: #e9e3fe;
+  color: #8a70d6;
 }
 
 #section-left .section-left__wrapper .logo__shapes .second-shape {
   top: 0.5rem;
   left: 1rem;
-  -webkit-transform: translate(-0.7rem) rotate(45deg);
-          transform: translate(-0.7rem) rotate(45deg);
-  color: #8a70d6;
+  -webkit-transform: translate(-0.5rem) rotate(45deg);
+          transform: translate(-0.5rem) rotate(45deg);
+  color: #e9e3fe;
+  margin-right: 1rem;
 }
 
 #section-left .section-left__wrapper .logo__title {
@@ -165,12 +172,13 @@ img {
 }
 
 #section-left .section-left__wrapper .section-left__menu {
+  margin-top: 2rem;
   margin-bottom: auto;
   line-height: 3.5;
   color: #a4a4a4;
 }
 
-#section-left .section-left__wrapper .section-left__menu ul a {
+#section-left .section-left__wrapper .section-left__menu ul .menu__link {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -180,21 +188,27 @@ img {
   gap: 1rem;
   border-radius: 1rem;
   padding: 0 1.5rem;
+  margin: 0.5rem 0;
   -webkit-transition: 350ms ease-in-out;
   transition: 350ms ease-in-out;
 }
 
-#section-left .section-left__wrapper .section-left__menu ul a:hover {
+#section-left .section-left__wrapper .section-left__menu ul .menu__link:hover {
   color: #423f40;
   background: #e9e3fe;
+}
+
+#section-left .section-left__wrapper .section-left__menu ul .active {
+  color: #423f40;
+  background: #e9e3fe;
+  border-radius: 1rem;
 }
 
 #section-left .section-left__wrapper .section-left__subscribe {
   background: #e9e3fe;
   border-radius: 1rem;
   text-align: center;
-  margin-top: 6rem;
-  padding: 0 1.5rem;
+  margin-bottom: auto;
 }
 
 #section-left .section-left__wrapper .section-left__subscribe .subscribe__image img {
@@ -223,15 +237,15 @@ img {
 }
 
 #section-center {
-  padding: 5rem 0;
+  padding: 2rem 0;
 }
 
 #section-center .section-center__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-rows: 0.2fr 4fr 5fr;
-      grid-template-rows: 0.2fr 4fr 5fr;
-  gap: 5rem;
+  -ms-grid-rows: 0.2fr 4fr 4fr;
+      grid-template-rows: 0.2fr 4fr 4fr;
+  gap: 2rem;
       grid-template-areas: "center__header" "new-coursecs" "my-coursecs";
   padding: 0 2rem;
 }
@@ -270,6 +284,12 @@ img {
   -ms-grid-row: 1;
   -ms-grid-column: 1;
   grid-area: search-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   background: #fff;
   color: #a4a4a4;
   border-radius: 1rem;
@@ -583,6 +603,12 @@ img {
   color: #8a70d6;
 }
 
+#section-center .my-coursecs .courses {
+  max-height: 30rem;
+  overflow-y: auto;
+  padding-bottom: 1rem;
+}
+
 #section-center .my-coursecs .courses .courses__table {
   width: 100%;
 }
@@ -601,12 +627,13 @@ img {
 #section-center .my-coursecs .courses .courses__table .table__body tr:hover {
   -webkit-box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
           box-shadow: 0rem 0.5rem 1rem 0.5rem #f1f1f1;
+  border-radius: 1rem;
   cursor: pointer;
 }
 
 #section-center .my-coursecs .courses .courses__table .table__body tr td {
   font-weight: 500;
-  padding: 0.5rem 0;
+  padding: 0.5rem;
 }
 
 #section-center .my-coursecs .courses .courses__table .table__body tr td:first-of-type {
@@ -668,12 +695,175 @@ img {
   text-align: left;
 }
 
+#section-center .my-coursecs .courses::-webkit-scrollbar {
+  width: 3px;
+}
+
+#section-center .my-coursecs .courses::-webkit-scrollbar-track {
+  background-color: #eee;
+}
+
+#section-center .my-coursecs .courses::-webkit-scrollbar-thumb {
+  background: #8a70d6;
+}
+
+#section-center .my-coursecs .courses .content .price {
+  text-align: right;
+}
+
 #section-center img {
   width: 10rem;
 }
 
+.right__calendar {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
+}
+
+.right__calendar .calendar {
+  width: 100%;
+  -webkit-box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+          box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
+  border-radius: 1rem;
+}
+
+.right__calendar .calendar .month {
+  background: #e9e3fe;
+  height: 7rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 100, 0.5);
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+  padding: 0 2rem;
+  padding-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.right__calendar .calendar .month i {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+.right__calendar .calendar .month i:hover {
+  color: #8a70d6;
+}
+
+.right__calendar .calendar .month .date {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.right__calendar .calendar .month .date h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+}
+
+.right__calendar .calendar .month .date p {
+  font-size: 1.4rem;
+}
+
+.right__calendar .calendar .weekdays {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  padding: 0 0.4rem;
+  margin-bottom: 1rem;
+}
+
+.right__calendar .calendar .weekdays div {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #a4a4a4;
+  letter-spacing: 0.1rem;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+}
+
+.right__calendar .calendar .days {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[7];
+      grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  padding: 0.2rem;
+}
+
+.right__calendar .calendar .days div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.4rem;
+  margin: 0.3rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  text-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3);
+  -webkit-transition: 250ms;
+  transition: 250ms;
+  cursor: pointer;
+}
+
+.right__calendar .calendar .days div:hover:not(.today) {
+  background: #e9e3fe;
+  text-shadow: 0 0.2rem 0.5rem #e9e3fe;
+}
+
+.right__calendar .calendar .days .prev-date,
+.right__calendar .calendar .days .next-date {
+  opacity: 0.5;
+}
+
+.right__calendar .calendar .days .today {
+  background: #8a70d6;
+  color: #fff;
+  border-radius: 50%;
+}
+
 #section-right {
-  padding: 5rem 2rem;
+  padding: 2rem;
+  padding-bottom: 0;
 }
 
 #section-right .section-right__wrapper {
@@ -687,8 +877,7 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  gap: 4rem;
-  height: 100%;
+  gap: 2.5rem;
 }
 
 #section-right .right__header {
@@ -761,90 +950,6 @@ img {
   font-weight: 400;
 }
 
-.right__calendar .calendar__title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1.5rem 0;
-}
-
-.right__calendar .calendar__title h4 {
-  font-weight: 600;
-}
-
-.right__calendar .calendar__title .title__right {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  gap: 1rem;
-}
-
-.right__calendar .calendar__title .title__right i {
-  width: 3rem;
-  height: 3rem;
-  border-radius: 50%;
-  padding: 0.8rem 1rem;
-  text-align: center;
-  cursor: pointer;
-  -webkit-transition: color, background 300ms;
-  transition: color, background 300ms;
-}
-
-.right__calendar .calendar__title .title__right i:hover {
-  color: #8a70d6;
-  background: #e9e3fe;
-}
-
-.right__calendar .calendar .calendar__table {
-  width: 100%;
-}
-
-.right__calendar .calendar .calendar__table .table__header th {
-  font-weight: 300;
-  padding: 2rem 0;
-  text-align: center;
-}
-
-.right__calendar .calendar .calendar__table .table__body td {
-  text-align: center;
-  cursor: pointer;
-  position: relative;
-  -webkit-transition: color 300ms;
-  transition: color 300ms;
-}
-
-.right__calendar .calendar .calendar__table .table__body td:hover {
-  color: #8a70d6;
-}
-
-.right__calendar .calendar .calendar__table .table__body .pre-month {
-  color: #a4a4a4;
-}
-
-.right__calendar .calendar .calendar__table .table__body .active-day {
-  background: #8a70d6;
-  color: #fff;
-  width: 1rem;
-  height: 1rem;
-  border-radius: 50%;
-  -webkit-transition: 300ms;
-  transition: 300ms;
-}
-
-.right__calendar .calendar .calendar__table .table__body .active-day:hover {
-  background: #e9e3fe;
-}
-
 .right__progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -853,7 +958,7 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .right__progress .progress__title h2 {
@@ -879,7 +984,7 @@ img {
   -webkit-box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
           box-shadow: 0.5rem 0.5rem 1rem 0.5rem rgba(128, 128, 128, 0.097);
   padding: 1rem 2rem;
-  margin: 2rem 0;
+  margin: 1rem 0;
   -webkit-transition: 500ms;
   transition: 500ms;
 }
@@ -969,8 +1074,8 @@ img {
 }
 
 .modal_wrapper .modal {
-  position: absolute;
-  top: 70%;
+  position: fixed;
+  top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -984,11 +1089,11 @@ img {
 }
 
 .modal_wrapper .overlay {
-  position: absolute;
+  position: fixed;
   top: 0rem;
   left: 0;
-  width: 100vw;
-  height: 100vmax;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
   -webkit-backdrop-filter: blur(3px);
           backdrop-filter: blur(3px);
